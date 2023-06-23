@@ -1,12 +1,17 @@
-# Electron and Express Boilerplate
+# Electron and Express Boilerplate with prisma
 
-The main goal of this project is to provide a simple boilerplate built with Electron, React and Express.
-Therefore users and server managers can setup customs URL and Ports everytime the server is started.
+In this branch, the project is based on the main branch, but with prisma pre configured.
+The schema is a simple structure to exemplify the use.
+Don't forget to generate your own migrations and client.
 
-If Host and Port are not specified, the default configuration will be used (localhost:3000)
+```bash
+$ yarn prisma migrate dev
+```
 
-## Prisma
-You can find the example/boilerplate using prisma inside the "prisma" branch.
+```bash
+$ yarn prisma generate
+```
+
 
 ## Tools
 - NodeJS

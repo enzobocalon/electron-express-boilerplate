@@ -14,6 +14,9 @@ dist-electron
 release
 *.local
 
+prisma/*.db
+prisma/migrations
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -24,3 +27,4 @@ release
 *.njsproj
 *.sln
 *.sw?
+*.env

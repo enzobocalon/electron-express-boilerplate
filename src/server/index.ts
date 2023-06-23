@@ -1,6 +1,7 @@
 import express from 'express'
 import { IServerFeedback } from '../types/ServerFeedback';
 import { Server } from 'http';
+import { router } from './routes';
 const app = express();
 
 let server: Server;
@@ -12,9 +13,8 @@ let serverFeedback: IServerFeedback = {
 // Define your server routes and logic here
 
 export function startServer(host = 'localhost', port = 3000): IServerFeedback {
-  app.get('/', (_, res) => {
-    res.send('Hello World')
-  })
+  app.use(express.json())
+  app.use(router);
   server = app.listen(port, () => {
     console.log(`Server is running on http://${host}:${port}`)
   });
