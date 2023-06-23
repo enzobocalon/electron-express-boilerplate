@@ -5,6 +5,9 @@ Therefore users and server managers can setup customs URL and Ports everytime th
 
 If Host and Port are not specified, the default configuration will be used (localhost:3000)
 
+## Prisma
+You can find the example/boilerplate using prisma inside the "prisma" branch.
+
 ## Tools
 - NodeJS
 - Typescript
