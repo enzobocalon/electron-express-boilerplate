@@ -45,8 +45,13 @@ function createWindow() {
   }
 }
 
+app.on('before-quit', () => {
+  stopServer();
+})
+
 app.on('window-all-closed', () => {
   win = null
+  app.quit()
 })
 
 app.whenReady().then(createWindow)
